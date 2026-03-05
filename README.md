@@ -9,14 +9,18 @@
 ## Contents
 
 - [Training Frameworks](#training-frameworks)
+- [Pretraining Implementations](#pretraining-implementations)
 - [End-to-End Training & Inference](#end-to-end-training--inference)
 - [Inference Frameworks](#inference-frameworks)
 - [Distributed Training](#distributed-training)
 - [Fine-Tuning & PEFT](#fine-tuning--peft)
 - [Model Compression & Quantization](#model-compression--quantization)
-- [Data Processing](#data-processing)
+- [Data Engineering](#data-engineering)
+- [Privacy & Security](#privacy--security)
+- [Domain-Specific LLMs](#domain-specific-llms)
 - [RAG & Vector Search](#rag--vector-search)
 - [Evaluation & Benchmarking](#evaluation--benchmarking)
+- [Research Tools](#research-tools)
 - [MLOps & Platform](#mlops--platform)
 - [Deployment & Serving](#deployment--serving)
 - [Monitoring & Observability](#monitoring--observability)
@@ -47,6 +51,25 @@
 | [Fairscale](https://github.com/facebookresearch/fairscale) | ![Stars](https://img.shields.io/github/stars/facebookresearch/fairscale) | PyTorch extensions for high-performance training |
 | [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) | ![Stars](https://img.shields.io/github/stars/NVIDIA/Megatron-LM) | Large-scale transformer training |
 | [ColossalAI](https://github.com/hpcaitech/ColossalAI) | ![Stars](https://img.shields.io/github/stars/hpcaitech/ColossalAI) | Large-scale model training system |
+
+---
+
+## Pretraining Implementations
+
+### From-Scratch Implementations
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [nanoGPT](https://github.com/karpathy/nanoGPT) | ![Stars](https://img.shields.io/github/stars/karpathy/nanoGPT) | Minimal GPT-2 training implementation by Karpathy |
+| [lit-llama](https://github.com/Lightning-AI/lit-llama) | ![Stars](https://img.shields.io/github/stars/Lightning-AI/lit-llama) | LLaMA implementation based on nanoGPT, Apache 2.0 licensed |
+| [GPT-NeoX](https://github.com/EleutherAI/gpt-neox) | ![Stars](https://img.shields.io/github/stars/EleutherAI/gpt-neox) | Large-scale autoregressive transformers by EleutherAI |
+| [lunariscodex](https://github.com/MeryylleA/lunariscodex) | ![Stars](https://img.shields.io/github/stars/MeryylleA/lunariscodex) | High-performance Llama-style pre-training toolkit |
+
+###RWKV
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [nanoRWKV](https://github.com/Hannibal046/nanoRWKV) | ![Stars](https://img.shields.io/github/stars/Hannibal046/nanoRWKV) | nanoGPT-style RWKV implementation - RNN with GPT-level performance |
 
 ---
 
@@ -170,9 +193,9 @@
 
 ---
 
-## Data Processing
+## Data Engineering
 
-### Data Pipelines
+### Data Processing
 
 | Framework | Stars | Description |
 |-----------|-------|-------------|
@@ -180,6 +203,65 @@
 | [Datasets](https://github.com/huggingface/datasets) | ![Stars](https://img.shields.io/github/stars/huggingface/datasets) | Public datasets for ML |
 | [WebDataset](https://github.com/webdataset/webdataset) | ![Stars](https://img.shields.io/github/stars/webdataset/webdataset) | Large-scale dataset handling |
 | [PyArrow](https://github.com/apache/arrow) | ![Stars](https://img.shields.io/github/stars/apache/arrow) | Columnar data format |
+
+### Data Selection & Filtering
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [DSIR](https://github.com/p-lambda/dsir) | ![Stars](https://img.shields.io/github/stars/p-lambda/dsir) | Large-scale data selection for language model training |
+
+### Tokenizers
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [tiktoken](https://github.com/openai/tiktoken) | ![Stars](https://img.shields.io/github/stars/openai/tiktoken) | Fast BPE tokenizer by OpenAI |
+| [sentencepiece](https://github.com/google/sentencepiece) | ![Stars](https://img.shields.io/github/stars/google/sentencepiece) | Unsupervised text tokenizer |
+
+---
+
+## Privacy & Security
+
+### Local & Offline Solutions
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [privateGPT](https://github.com/imartinez/privateGPT) | ![Stars](https://img.shields.io/github/stars/imartinez/privateGPT) | Private Q&A with local LLMs, 100% offline |
+| [GPT4All](https://github.com/nomic-ai/gpt4all) | ![Stars](https://img.shields.io/github/stars/nomic-ai/gpt4all) | Open-source LLM ecosystem you can run anywhere |
+| [llamafile](https://github.com/Mozilla-OA/llamafile) | ![Stars](https://img.shields.io/github/stars/Mozilla-OA/llamafile) | Single-file LLM distribution |
+
+### Open Privacy-Focused Models
+
+| Model | Description |
+|-------|-------------|
+| [BLOOM](https://bigscience.huggingface.org/bloom) | BigScience open-access multilingual model |
+| [Falcon](https://falconllm.tii.ae/) | Technology Innovation Institute's open models |
+
+---
+
+## Domain-Specific LLMs
+
+### Healthcare & Medical
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [BioGPT](https://github.com/microsoft/BioGPT) | ![Stars](https://img.shields.io/github/stars/microsoft/BioGPT) | Biomedical language model by Microsoft |
+| [Med-PaLM](https://github.com/Stanford-AI-Lab/Med-PaLM) | ![Stars](https://img.shields.io/github/stars/Stanford-AI-Lab/Med-PaLM) | Medical domain LLM by Stanford |
+| [Healthcare-LLM](https://github.com/kangjiayin/Healthcare-LLM) | ![Stars](https://img.shields.io/github/stars/kangjiayin/Healthcare-LLM) | Healthcare-specific fine-tuning |
+
+### Code & Development
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [CodeLlama](https://github.com/facebookresearch/codellama) | ![Stars](https://img.shields.io/github/stars/facebookresearch/codellama) | Code-specialized Llama by Meta |
+| [StarCoder](https://github.com/bigcode-project/starcoder) | ![Stars](https://img.shields.io/github/stars/bigcode-project/starcoder) | Open code generation model by BigCode |
+| [CodeGen](https://github.com/salesforce/CodeGen) | ![Stars](https://img.shields.io/github/stars/salesforce/CodeGen) | Open code generation models |
+
+### Finance
+
+| Framework | Description |
+|-----------|-------------|
+| [BloombergGPT](https://bloomberg.com/company/press/bloomberg-gpt-50-billion-parameter-llm-purpose-built-finance) | Financial domain LLM |
+| [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) | Open-source financial LLM |
 
 ---
 
@@ -219,6 +301,35 @@
 | [LangChain](https://github.com/langchain-ai/langchain) | ![Stars](https://img.shields.io/github/stars/langchain-ai/langchain) | LLM application framework |
 | [Awesome-LLM-Eval](https://github.com/onejune2018/Awesome-LLM-Eval) | ![Stars](https://img.shields.io/github/stars/onejune2018/Awesome-LLM-Eval) | Curated list of LLM evaluation tools and benchmarks |
 
+### Research Benchmarks
+
+| Benchmark | Description |
+|-----------|-------------|
+| [MMLU](https://huggingface.co/datasets/llm-benchmarks/MMLU) | Multi-task language understanding |
+| [HumanEval](https://github.com/openai/human-eval) | Code generation evaluation |
+| [BBH](https://github.com/google-research/google-research/tree/master/big_bench) | Big Bench Hard - challenging tasks |
+| [IFEval](https://github.com/google-research/google-research/tree/master/if_eval) | Instruction following evaluation |
+
+---
+
+## Research Tools
+
+### Experiment Tracking
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [Weights & Biases](https://github.com/wandb/wandb) | ![Stars](https://img.shields.io/github/stars/wandb/wandb) | ML experiment tracking |
+| [MLflow](https://github.com/mlflow/mlflow) | ![Stars](https://img.shields.io/github/stars/mlflow/mlflow) | ML lifecycle management |
+| [TensorBoard](https://github.com/tensorflow/tensorboard) | ![Stars](https://img.shields.io/github/stars/tensorflow/tensorboard) | Visualization toolkit |
+| [Aim](https://github.com/aimhubio/aim) | ![Stars](https://img.shields.io/github/stars/aimhubio/aim) | Self-hosted ML experiment tracker |
+
+### Visualization & Analysis
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [TransformerLens](https://github.com/TransformerLensOrg/TransformerLens) | ![Stars](https://img.shields.io/github/stars/TransformerLensOrg/TransformerLens) | Interpretability for GPT-style models |
+| [PyVis](https://github.com/Han-Lee/PyVis) | ![Stars](https://img.shields.io/github/stars/Han-Lee/PyVis) | Neural network visualization |
+
 ---
 
 ## MLOps & Platform
@@ -249,17 +360,6 @@
 ---
 
 ## Monitoring & Observability
-
-### Training Monitoring
-
-| Framework | Stars | Description |
-|-----------|-------|-------------|
-| [Weights & Biases](https://github.com/wandb/wandb) | ![Stars](https://img.shields.io/github/stars/wandb/wandb) | ML experiment tracking |
-| [MLflow](https://github.com/mlflow/mlflow) | ![Stars](https://img.shields.io/github/stars/mlflow/mlflow) | ML lifecycle management |
-| [TensorBoard](https://github.com/tensorflow/tensorboard) | ![Stars](https://img.shields.io/github/stars/tensorflow/tensorboard) | Visualization toolkit |
-| [Aim](https://github.com/aimhubio/aim) | ![Stars](https://img.shields.io/github/stars/aimhubio/aim) | Self-hosted ML experiment tracker |
-
-### Inference Monitoring
 
 | Framework | Stars | Description |
 |-----------|-------|-------------|
