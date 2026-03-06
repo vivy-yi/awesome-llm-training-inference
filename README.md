@@ -72,6 +72,14 @@
 |-----------|-------|-------------|
 | [nanoRWKV](https://github.com/Hannibal046/nanoRWKV) | ![Stars](https://img.shields.io/github/stars/Hannibal046/nanoRWKV) | nanoGPT-style RWKV implementation - RNN with GPT-level performance |
 
+### Large-Scale Pretraining
+
+| Framework | Stars | Description |
+|-----------|-------|-------------|
+| [llm-pretrain-100b](https://github.com/anilatambharii/llm-pretrain-100b) | ![Stars](https://img.shields.io/github/stars/anilatambharii/llm-pretrain-100b) | LLM pretraining framework (100B+ params): Megatron-LM + DeepSpeed + FSDP |
+| [BumbleCore](https://github.com/wxhcore/bumblecore) | ![Stars](https://img.shields.io/github/stars/wxhcore/bumblecore) | End-to-end LLM training framework with BumbleBee architecture |
+| [REGENAURA](https://github.com/RedAILabs/REGENAURA) | ![Stars](https://img.shields.io/github/stars/RedAILabs/REGENAURA) | Lightweight pretraining framework for encoder-decoder LLMs |
+
 ---
 
 ## End-to-End Training & Inference
@@ -84,6 +92,7 @@
 | [LlamaFactory](https://github.com/hiyouga/LlamaFactory) | ![Stars](https://img.shields.io/github/stars/hiyouga/LlamaFactory) | Unified efficient fine-tuning of 100+ LLMs |
 | [TRL](https://github.com/huggingface/trl) | ![Stars](https://img.shields.io/github/stars/huggingface/trl) | Train language models with RLHF and DPO |
 | [DeepSpeed-Chat](https://github.com/microsoft/DeepSpeed) | ![Stars](https://img.shields.io/github/stars/microsoft/DeepSpeed) | Easy-to-use RLHF training pipeline |
+| [LLM-RLHF-Tuning](https://github.com/raghavc/LLM-RLHF-Tuning-with-PPO-and-DPO) | ![Stars](https://img.shields.io/github/stars/raghavc/LLM-RLHF-Tuning-with-PPO-and-DPO) | RLHF training with PPO and DPO algorithms |
 
 ### End-to-End Inference
 
