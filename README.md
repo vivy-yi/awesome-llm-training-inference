@@ -154,7 +154,7 @@
 |-----------|-------|-------------|
 | [IPEX-LLM](https://github.com/intel/ipex-llm) | ![Stars](https://img.shields.io/github/stars/intel/ipex-llm) | LLM inference acceleration on Intel GPUs/CPU |
 | [OpenVINO](https://github.com/openvinotoolkit/openvino) | ![Stars](https://img.shields.io/github/stars/openvinotoolkit/openvino) | Intel hardware inference optimization toolkit |
-| [vLLM](https://github.com/vllm-project/vllm) | ![Stars](https://img.shields.io/github/stars/vllm-project/vllm) | High-throughput LLM inference with PagedAttention |
+| [Triton](https://github.com/triton-inference-server/triton) | ![Stars](https://img.shields.io/github/stars/triton-inference-server/triton) | Open-source GPU inference server |
 
 ---
 
